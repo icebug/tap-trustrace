@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "properties": {
+        "articleUid": {
+            "type": "string"
+        },
+        "internalArticleName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "internalArticleNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "articleType": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "year": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "season": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "traceable": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "supplierUid": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "supplierArticleName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "supplierArticleNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "width": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "materialComposition": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "float"
+                    }
+                }
+            }
+        },
+        "customFields": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": "object"
+            }
+        },
+        "extraction_date": {
+            "type": "string"
+        }
+    }
+}

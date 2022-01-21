@@ -1,0 +1,105 @@
+{
+    "type": "object",
+    "properties": {
+        "styleUid": {
+            "type": "string"
+        },
+        "styleName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "styleNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "productType": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "year": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "season": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "certificatesRequired": {
+            "type": [
+                "null",
+                "array"
+            ]
+        },
+        "sustainabilityLabels": {
+            "type": [
+                "null",
+                "array"
+            ]
+        },
+        "suppliers": {
+            "type": [
+                "null",
+                "array"
+            ]
+        },
+        "billOfMaterials": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "articleUid": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "array"
+                    },
+                    "areaOfUsage": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "materialComposition": {
+            "type": [
+                "null",
+                "array"
+            ]
+        },
+        "productCategories": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "categoryName": {
+                        "type": "string"
+                    },
+                    "groupName": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "extraction_date": {
+            "type": "string"
+        }
+    }
+}
