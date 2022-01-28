@@ -76,7 +76,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "type": "float"
+                        "type": "number"
                     }
                 }
             }
