@@ -87,7 +87,69 @@
                 "array"
             ],
             "items": {
-                "type": "object"
+                "type": "object",
+                "properties": {
+                    "cfSustainabilityInformationOtherCuttingWasteValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "cfHiggMsiHiggMappingMaterialIdValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "cfSustainabilityInformationTreatmentProcessesLowImpactTreatmentInValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    },
+                    "cfSustainabilityInformationRecyclingRecycledContentInValue2": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "cfSustainabilityInformationRecyclingRecycledContentInValue3": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "cfHiggMsiHiggMappingMaterialNameValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "cfSustainabilityInformationSourcingRenewableResourceInValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    },
+                    "cfSustainabilityInformationRecyclingRecycledContentInValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    },
+                    "cfHiggMsiHiggScoresGlobalWarmingMidpointsKgCo2EqValue1": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    },
+                    "cfSustainabilityInformationRecyclingRecycledContentInValue4": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
             }
         },
         "extraction_date": {
