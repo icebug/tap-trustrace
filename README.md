@@ -57,6 +57,7 @@ You can also test the `tap-trustrace` CLI interface directly using `poetry run`:
 
 ```bash
 poetry run tap-trustrace --help
+poetry run tap-trustrace --config config.json > out.jsonl
 ```
 
 ### Testing with [Meltano](https://www.meltano.com)
