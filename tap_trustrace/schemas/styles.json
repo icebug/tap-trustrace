@@ -38,19 +38,37 @@
             "type": [
                 "null",
                 "array"
-            ]
+            ],
+            "items": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            }
         },
         "sustainabilityLabels": {
             "type": [
                 "null",
                 "array"
-            ]
+            ],
+            "items": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            }
         },
         "suppliers": {
             "type": [
                 "null",
                 "array"
-            ]
+            ],
+            "items": {
+                "type": [
+                    "null",
+                    "string"
+                ]
+            }
         },
         "billOfMaterials": {
             "type": [
@@ -58,13 +76,28 @@
                 "array"
             ],
             "items": {
-                "type": "object",
+                "type": [
+                    "null",
+                    "object"
+                ],
                 "properties": {
                     "articleUid": {
-                        "type": "string"
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     },
-                    "value": {
-                        "type": "array"
+                    "quantity_value": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    },
+                    "quantity_unit": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     },
                     "areaOfUsage": {
                         "type": [
@@ -79,7 +112,27 @@
             "type": [
                 "null",
                 "array"
-            ]
+            ],
+            "items": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "properties": {
+                    "name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "value": {
+                        "type": [
+                            "null",
+                            "number"
+                        ]
+                    }
+                }
+            }
         },
         "productCategories": {
             "type": [
@@ -87,13 +140,22 @@
                 "array"
             ],
             "items": {
-                "type": "object",
+                "type": [
+                    "null",
+                    "object"
+                ],
                 "properties": {
                     "categoryName": {
-                        "type": "string"
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     },
                     "groupName": {
-                        "type": "string"
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     }
                 }
             }

@@ -58,12 +58,6 @@
                 "string"
             ]
         },
-        "width": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
         "materialComposition": {
             "type": [
                 "null",
@@ -73,84 +67,260 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": [
+                            "null",
+                            "string"
+                        ]
                     },
                     "value": {
-                        "type": "number"
+                        "type": [
+                            "null",
+                            "number"
+                        ]
                     }
                 }
             }
         },
-        "customFields": {
+        "cfPhysicalInformationFactsThicknessValue1": {
             "type": [
                 "null",
-                "array"
+                "number"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationYDirectionInValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationYDirectionInValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationYDirectionInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfHiggMsiHiggMappingMaterialNameValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationSourcingRenewableResourceInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfCommercialInformationCommercialInformationRevisionValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationAgeingYellowingStandardAstmD1148Value1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationXDirectionInValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationXDirectionInValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthElongationXDirectionInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfHiggMsiHiggScoresGlobalWarmingMidpointsKgCo2EqValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationWaterMoistureAndColourColorFastnessValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationWaterMoistureAndColourColorFastnessValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationWaterMoistureAndColourColorFastnessValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfCommercialInformationCommercialInformationAreaOfUsageValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationResistanceAbrasionDryValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationResistanceAbrasionDryValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthXDirectionValue4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationResistanceAbrasionDryValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthXDirectionValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthXDirectionValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfCommercialInformationCommercialInformationStatusValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfCommercialInformationCommercialInformationGroupValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthXDirectionValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfHiggMsiHiggMappingMaterialIdValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationTreatmentProcessesLowImpactTreatmentInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfSustainabilityInformationSourcingSourcingOfRawMaterialValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfCommercialInformationCommercialInformationDateOfRevisionValue1": {
+            "type": [
+                "null",
+                "string"
             ],
-            "items": {
-                "type": "object",
-                "properties": {
-                    "cfSustainabilityInformationOtherCuttingWasteValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "cfHiggMsiHiggMappingMaterialIdValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "cfSustainabilityInformationTreatmentProcessesLowImpactTreatmentInValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "cfSustainabilityInformationRecyclingRecycledContentInValue2": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "cfSustainabilityInformationRecyclingRecycledContentInValue3": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "cfHiggMsiHiggMappingMaterialNameValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "cfSustainabilityInformationSourcingRenewableResourceInValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "cfSustainabilityInformationRecyclingRecycledContentInValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "cfHiggMsiHiggScoresGlobalWarmingMidpointsKgCo2EqValue1": {
-                        "type": "array",
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "cfSustainabilityInformationRecyclingRecycledContentInValue4": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    }
-                }
-            }
+            "format": "date-time"
+        },
+        "cfPhysicalInformationStrengthTearStrengthYDirectionValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationOtherCuttingWasteValue1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthYDirectionValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthYDirectionValue4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfPhysicalInformationStrengthTearStrengthYDirectionValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationRecyclingRecycledContentInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfPhysicalInformationFactsThicknessValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationSourcingCircularityInValue1": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "cfSustainabilityInformationRecyclingRecycledContentInValue2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationRecyclingRecycledContentInValue3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "cfSustainabilityInformationRecyclingRecycledContentInValue4": {
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "extraction_date": {
             "type": "string"
