@@ -60,7 +60,6 @@ STYLES_CUSTOM_FIELDS = [
     "sustainabilityLabels",
     "suppliers",
     "billOfMaterials",
-    "materialComposition",
     "productCategories",
 ]
 
@@ -68,10 +67,11 @@ STYLES_CUSTOM_FIELDS = [
 class MaterialsStream(trustraceStream):
 
     name = "materials"
-    path = "/materials"
+    path = "/materials/get-all-materials"
     primary_keys = ["articleUid"]
     replication_key = None
     schema_filepath = SCHEMAS_DIR / "materials.json"
+    rest_method = "POST"
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
@@ -96,10 +96,11 @@ class MaterialsStream(trustraceStream):
 class StylesStream(trustraceStream):
 
     name = "styles"
-    path = "/styles"
+    path = "/styles/get-all-styles"
     primary_keys = ["styleUid"]
     replication_key = None
     schema_filepath = SCHEMAS_DIR / "styles.json"
+    rest_method = "POST"
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
@@ -110,9 +111,9 @@ class StylesStream(trustraceStream):
         """As needed, append or transform raw data to match expected structure."""
         row["extraction_date"] = date.today().strftime("%Y-%m-%d")
         for field in STYLES_CUSTOM_FIELDS:
-            if len(row[field]) == 0:
+            if (field not in row) or (len(row[field]) == 0):
                 row[field] = None
-            if field == "billOfMaterials":
+            elif field == "billOfMaterials":
                 for obj in row["billOfMaterials"]:
                     if "areaOfUsage" not in obj:
                         obj["areaOfUsage"] = None

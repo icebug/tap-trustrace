@@ -1,6 +1,7 @@
 """REST client handling, including trustraceStream base class."""
 
 import requests
+import json
 
 from datetime import date
 from pathlib import Path
@@ -78,7 +79,9 @@ class trustraceStream(RESTStream):
         By default, no payload will be sent (return None).
         """
         # TODO: Delete this method if no payload is required. (Most REST APIs.)
-        return None
+
+        payload = {"pagination": {"page": 1, "size": 500}}
+        return payload
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
