@@ -246,7 +246,7 @@
         "cfSustainabilityInformationSourcingSourcingOfRawMaterialValue1": {
             "type": [
                 "null",
-                "number"
+                "string"
             ]
         },
         "cfCommercialInformationCommercialInformationDateOfRevisionValue1": {
