@@ -20,7 +20,7 @@ SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 class trustraceStream(RESTStream):
     """trustrace stream class."""
 
-    url_base = "https://developer.trustrace.com/api/v1"
+    url_base = "https://developer.trustrace.com/api/v2"
 
     next_page_token_jsonpath = "$.next_page"  # Or override `get_next_page_token`.
 
