@@ -22,7 +22,8 @@ class trustraceStream(RESTStream):
 
     url_base = "https://developer.trustrace.com/api/v2"
 
-    next_page_token_jsonpath = "$.next_page"  # Or override `get_next_page_token`.
+    current_page_token_jsonpath = "$.metaData.pageNumber"
+    total_pages_jsonpath = "$.metaData.totalPages"
 
     @property
     def authenticator(self) -> APIKeyAuthenticator:
@@ -45,19 +46,24 @@ class trustraceStream(RESTStream):
         self, response: requests.Response, previous_token: Optional[Any]
     ) -> Optional[Any]:
         """Return a token for identifying next page or None if no more pages."""
-        # TODO: If pagination is required, return a token which can be used to get the
-        #       next page. If this is the final page, return "None" to end the
-        #       pagination loop.
-        if self.next_page_token_jsonpath:
-            all_matches = extract_jsonpath(
-                self.next_page_token_jsonpath, response.json()
+        if not previous_token:
+            current_page_match = extract_jsonpath(
+                self.current_page_token_jsonpath, response.json()
             )
-            first_match = next(iter(all_matches), None)
-            next_page_token = first_match
+            current_page_token = next(iter(current_page_match), None)
         else:
-            next_page_token = response.headers.get("X-Next-Page", None)
+            current_page_token = previous_token
 
-        return next_page_token
+        total_pages_match = extract_jsonpath(
+            self.total_pages_jsonpath, response.json()
+        )
+        total_pages = next(iter(total_pages_match), None)
+
+        if current_page_token and current_page_token < total_pages:
+            next_page_token = current_page_token + 1
+            return next_page_token
+        else:
+            return None
 
     def get_url_params(
         self, context: Optional[dict], next_page_token: Optional[Any]
@@ -72,14 +78,17 @@ class trustraceStream(RESTStream):
         return params
 
     def prepare_request_payload(
-        self, context: Optional[dict], next_page_token: Optional[Any]
+        self, context: Optional[dict], page_token: Optional[Any]
     ) -> Optional[dict]:
         """Prepare the data payload for the REST API request.
 
         By default, no payload will be sent (return None).
         """
+        if not page_token:
+            page_token = 1
+
         payload = {
-            "pagination": {"page": 1, "size": 500},
+            "pagination": {"page": page_token, "size": 100},
             "projection": "detailedView"
         }
         return payload
