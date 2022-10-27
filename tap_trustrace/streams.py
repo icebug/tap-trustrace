@@ -1,5 +1,6 @@
 """Stream type classes for tap-trustrace."""
 import requests
+import re
 
 from datetime import date
 from pathlib import Path
@@ -88,6 +89,10 @@ class MaterialsStream(trustraceStream):
             for cf in MATERIALS_CUSTOM_FIELDS:
                 if cf in row["customFields"]:
                     row[cf] = row["customFields"][cf][0]
+                    # Handle user input error of writing decimal numbers with comma sign
+                    m = re.match("(-?[0-9]+),([0-9]+)", row[cf])
+                    if m:
+                        row[cf] = ".".join(m.groups())
                 else:
                     row[cf] = None
         else:
