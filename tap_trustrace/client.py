@@ -78,9 +78,10 @@ class trustraceStream(RESTStream):
 
         By default, no payload will be sent (return None).
         """
-        # TODO: Delete this method if no payload is required. (Most REST APIs.)
-
-        payload = {"pagination": {"page": 1, "size": 500}}
+        payload = {
+            "pagination": {"page": 1, "size": 500},
+            "projection": "detailedView"
+        }
         return payload
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
