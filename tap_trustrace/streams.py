@@ -90,7 +90,8 @@ class MaterialsStream(trustraceStream):
                 if cf in row["customFields"]:
                     row[cf] = row["customFields"][cf][0]
                     # Handle user input error of writing decimal numbers with comma sign
-                    m = re.match("(-?[0-9]+),([0-9]+)", row[cf])
+                    # or double values with trailing data.
+                    m = re.match("(-?[0-9]+)[,|.]([0-9]+)", row[cf])
                     if m:
                         row[cf] = ".".join(m.groups())
                 else:
