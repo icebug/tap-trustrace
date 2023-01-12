@@ -85,7 +85,8 @@ class MaterialsStream(trustraceStream):
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
         """As needed, append or transform raw data to match expected structure."""
         row["extraction_date"] = date.today().strftime("%Y-%m-%d")
-        if "customFields" in row:
+
+        if "customFields" in row and row["customFields"]:
             for cf in MATERIALS_CUSTOM_FIELDS:
                 if cf in row["customFields"]:
                     row[cf] = row["customFields"][cf][0]
@@ -119,8 +120,11 @@ class StylesStream(trustraceStream):
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
         """As needed, append or transform raw data to match expected structure."""
         row["extraction_date"] = date.today().strftime("%Y-%m-%d")
+
         for field in STYLES_CUSTOM_FIELDS:
-            if (field not in row) or (len(row[field]) == 0):
+            if (field not in row) \
+                or (not row[field]) \
+                    or (len(row[field]) == 0):
                 row[field] = None
             elif field == "billOfMaterials":
                 for obj in row["billOfMaterials"]:
